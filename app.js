@@ -8,7 +8,7 @@ ctx.fillRect(0, 0, width, height);
 let waveLenght = 600*Math.pow(10,-9);
 let koef = 1.5;
 let d = 0.0005;
-let L = 1;
+let L = 1.7;
 
 
 const availableScreenWidth = window.screen.availWidth;
@@ -39,11 +39,11 @@ function  showMessage( waveLenght ,koef,d,L){
   console.log(clickX);
   console.log(clickY);
 
-    for (let x =height/2; x>-height/2; x -=width2){
+    for (let x =height/2; x>-height/2; x -=1.5){
         let I = 4 * I0 * Math.cos(Math.PI * koef * d * x / (waveLenght * L))* I0 * Math.cos(Math.PI * koef * d * x / (waveLenght * L));
         ctx.fillStyle = `rgb(${I*255}, ${I*255}, ${I*255})`;
         //console.log("I: ",I );
-        ctx.fillRect(0,height/2-x, width, height/2-x+width2);
+        ctx.fillRect(0,height/2-x, width, height/2-x+1.5);
     }
 
 }

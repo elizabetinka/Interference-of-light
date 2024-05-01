@@ -38,11 +38,11 @@ function  showMessage( waveLenght ,koef,d,L){
   console.log(clickX);
   console.log(clickY);
 
-    for (let x =height/2; x>-height/2; x -=1){
+    for (let x =height/2; x>-height/2; x -=1.5){
         let I = 4 * I0 * Math.cos(Math.PI * koef * d * x / (waveLenght * L))* I0 * Math.cos(Math.PI * koef * d * x / (waveLenght * L));
         ctx.fillStyle = `rgb(${I*255}, ${I*255}, ${I*255})`;
         console.log("I: ",I );
-        ctx.fillRect(0,height/2-x, width, height/2-x+1);
+        ctx.fillRect(0,height/2-x, width, height/2-x+1.5);
     }
 
 }
